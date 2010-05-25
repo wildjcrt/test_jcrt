@@ -1,0 +1,23 @@
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-05-25 12:12:46) [GET]
+Rendering welcome/index
+Completed in 46ms (View: 45, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-05-25 12:13:05) [GET]
+Rendering welcome/index
+Completed in 25ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-05-25 12:13:20) [GET]
+Rendering welcome/index
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-25 12:13:25) [GET]
+
+ActionController::RoutingError (No route matches "/jquery.copy.swf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
