@@ -1,16 +1,22 @@
-<%= javascript_include_tag("jquery.js","jquery.copy.js")%>
+<%= javascript_include_tag("jquery.js","ZeroClipboard.js")%>
 
 <div id="postBlog">
     貼到我的 blog 文章<br>
     <textarea name="" class="iframe-code"><iframe width="452" height="282" frameborder="0" src="http://stackoverflow.com/questions/867831/merge-changes-from-remote-github-repository-to-your-local-repository" scrolling="no"></iframe></textarea><br>
 	 <%= link_to("複製url","#", :id => "copy-iframe-code") %>
+
 </div>
 
 
-<script type="text/javascript">
-$("#copy-iframe-code").click(function(){
-    alert($("#postBlog .iframe-code").val());
-    $.copy($("#postBlog .iframe-code").val());
-});
+<script language="javascript">
+	$(function(){
+		var clip = new ZeroClipboard.Client();
+		clip.setHandCursor( true );
+		clip.setText("<iframe src='http://event-app.techbang.com.tw/event_fun/sticker_for_user' width='170' height='360' scrolling='no' frameborder='0'></iframe>");
+		clip.glue('copy-iframe-code');
 
+		clip.addEventListener( "complete", function(client) {
+		     alert("複製成功");
+		});
+	});
 </script>
